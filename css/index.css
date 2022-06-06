@@ -1,0 +1,21 @@
+body {
+    background: slategrey
+}
+
+.nameAndClass {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white
+}
+
+button {
+    text-align: center;
+    font-size: 1em;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: black
+}
