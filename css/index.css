@@ -17,5 +17,11 @@ button {
     margin: auto;
     display: flex;
     justify-content: center;
-    color: black
+    background-color: red;
+    color: white;
+    border-radius: 0.5em;
+}
+ .doneWithModuleButton > button {
+    background-color: green;
+    color: white
 }
