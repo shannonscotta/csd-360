@@ -1,38 +1,32 @@
 table {
     background: white;
-    border-radius: .1em;
+    border-radius: 0.1em;
     border: 1px solid black;
     width: 80vw;
-    box-shadow: 0 0 .25em;
+    box-shadow: 0 0 0.25em;
     margin-left: auto;
     margin-right: auto;
 }
-
 tr {
     height: 1em;
 }
-
 tr:nth-child(odd) td {
     background: lightblue;
 }
-
-td,
-th {
+td {
     width: 25%;
     height: 1em;
     background: white;
-    padding: .1em;
+    padding: 0.1em;
     text-align: left;
     vertical-align: top;
-    border-width: .1em;
+    border-width: 0.1em;
     border-style: inset;
     border-color: gray;
 }
-
 th {
     text-align: center;
 }
-
 table,
 th,
 td {
