@@ -33,3 +33,9 @@ td {
     border: 1px solid black;
     border-collapse: collapse;
 }
+
+h3 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
