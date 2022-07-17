@@ -2,6 +2,7 @@
 // the purpose of this code is to generate a random hex value to change background color per each click
 
 let colorsArray = [];
+let btn = document.getElementById('btn');
 
 function randomHexGenerator() {
     let randomColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0')
@@ -18,7 +19,7 @@ console.log(colorsArray);
 
 let index = 0;
 
-document.addEventListener('click', function onClick() {
+btn.addEventListener('click', function onClick() {
     document.body.style.backgroundColor = colorsArray[index];
     document.body.style.color = '#ffffff';
     index = index >= colorsArray.length - 1 ? 0 : index + 1;
