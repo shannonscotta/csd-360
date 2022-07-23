@@ -1,0 +1,35 @@
+img {
+    cursor: pointer;
+}
+
+.parentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.parentContainer .rightChild * {
+    flex: 1 1 4em;
+}
+
+.leftChild {
+    position: absolute;
+    left: 0px;
+    width: 50%;
+}
+
+.leftChild > img {
+    width: 45.8rem;
+    display: block;
+    margin: auto;
+}
+
+.rightChild {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+}
+
+.rightChild > img {
+    width: 15rem;
+}
