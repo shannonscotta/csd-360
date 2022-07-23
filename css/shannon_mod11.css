@@ -19,7 +19,7 @@ img {
 }
 
 .leftChild > img {
-    width: 45.8rem;
+    width: 49rem;
     display: block;
     margin: auto;
 }
@@ -32,4 +32,6 @@ img {
 
 .rightChild > img {
     width: 15rem;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
