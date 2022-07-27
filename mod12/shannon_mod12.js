@@ -6,6 +6,10 @@ let rowInserterF = document.getElementById('containedTableF');
 
 let headingContext = document.getElementById('headingContextID');
 
+let volumeInserterMW = document.getElementById('volumeMondayWednesdayID');
+
+let volumeInserterF = document.getElementById('volumeFridayID');
+
 let poundArrayMW = [];
 let poundArrayF = [];
 
@@ -26,6 +30,32 @@ let plateArrayMW = [];
 let plateArrayF = [];
 
 headingContext.innerHTML += `<h3>4 WEEK BENCH PROGRAM BASED ON 1RM ON ${oneRepMax}</h3>`;
+
+//get daily volume for MW
+let getVolumeMW = () => {
+    let sum = 0;
+    for (let i = 0; i < repArrayMW.length; i++){
+        sum += percentArrayMW[i] / 100 * oneRepMax * repArrayMW[i]
+        console.log(sum);
+    }
+    volumeInserterMW.innerHTML += `DAILY VOLUME : ${sum.toFixed(0)} LBS`
+}
+
+getVolumeMW();
+
+
+
+let getVolumeF = () => {
+    let sum = 0;
+    for (let i = 0; i < repArrayF.length; i++){
+        sum += percentArrayF[i] / 100 * oneRepMax * repArrayF[i]
+        console.log(sum);
+    }
+    volumeInserterF.innerHTML += `DAILY VOLUME : ${sum.toFixed(0)} LBS`
+}
+
+getVolumeF();
+
 
 // function that takes the percents and multiples it by 1RM
 let getPoundageMW = () => {
@@ -86,6 +116,16 @@ let getPlatesNeededMW = () => {
             plateString += "  10  +";
         }
 
+        if (splitPoundArrayMinusBarMW[i] >= 10) {
+            splitPoundArrayMinusBarMW[i] -= 10;
+            plateString += "  10  +";
+        }
+
+        if (splitPoundArrayMinusBarMW[i] >= 5) {
+            splitPoundArrayMinusBarMW[i] -= 5;
+            plateString += "  5  +";
+        }
+
         if (splitPoundArrayMinusBarMW[i] >= 5) {
             splitPoundArrayMinusBarMW[i] -= 5;
             plateString += "  5  +";
@@ -100,6 +140,60 @@ let getPlatesNeededMW = () => {
             splitPoundArrayMinusBarMW[i] -= 2.5;
             plateString += "  2.5  +";
         }
+        if (splitPoundArrayMinusBarMW[i] >= 1.25) {
+            splitPoundArrayMinusBarMW[i] -= 1.25;
+            plateString += "  1.25  +";
+        }
+
+        if (splitPoundArrayMinusBarMW[i] >= 1.25) {
+            splitPoundArrayMinusBarMW[i] -= 1.25;
+            plateString += "  1.25  +";
+        }
+
+        if (splitPoundArrayMinusBarMW[i] >= 1.25) {
+            splitPoundArrayMinusBarMW[i] -= 1.25;
+            plateString += "  1.25  +";
+        }
+
+        // if (splitPoundArrayMinusBarMW[i] >= 1) {
+        //     splitPoundArrayMinusBarMW[i] -= 1;
+        //     plateString += "  1  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= 1) {
+        //     splitPoundArrayMinusBarMW[i] -= 1;
+        //     plateString += "  1  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= .75) {
+        //     splitPoundArrayMinusBarMW[i] -= .75;
+        //     plateString += "  .75  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= .75) {
+        //     splitPoundArrayMinusBarMW[i] -= .75;
+        //     plateString += "  .75  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= .5) {
+        //     splitPoundArrayMinusBarMW[i] -= .5;
+        //     plateString += "  .5  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= .5) {
+        //     splitPoundArrayMinusBarMW[i] -= .5;
+        //     plateString += "  .5  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= .25) {
+        //     splitPoundArrayMinusBarMW[i] -= .25;
+        //     plateString += "  .25  +";
+        // }
+        //
+        // if (splitPoundArrayMinusBarMW[i] >= .25) {
+        //     splitPoundArrayMinusBarMW[i] -= .25;
+        //     plateString += "  .25  +";
+        // }
         plateArrayMW.push(plateString.slice(0, -1));
     }
 };
